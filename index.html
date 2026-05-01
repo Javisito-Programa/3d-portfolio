@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   
-  <!-- Import Map for Three.js -->
+  <!-- Mapa de Importación para Three.js -->
   <script type="importmap">
     {
       "imports": {
@@ -19,17 +19,19 @@
       }
     }
   </script>
+  <!-- Model Viewer Script -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
-  <!-- Error Banner (hidden by default) -->
+  <!-- Banner de Error (Oculto por defecto) -->
   <div id="cors-warning" style="display: none; position: fixed; top: 0; width: 100%; background: #fff; color: #000; z-index: 9999; text-align: center; padding: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: bold;">
     [!] ADVERTENCIA: Estás abriendo el archivo localmente (file://). El modelo 3D no se cargará. Por favor, usa Visual Studio Code con la extensión "Live Server".
   </div>
 
-  <!-- WebGL Canvas Container -->
+  <!-- Contenedor del Canvas WebGL (Fondo 3D) -->
   <div id="canvas-container"></div>
 
-  <!-- UI Overlay -->
+  <!-- Capa de Interfaz de Usuario (UI) superpuesta -->
   <main id="app">
     <header class="header">
       <div class="header-line"></div>
@@ -39,7 +41,9 @@
           <li><a href="#about" data-text="01. INFO">01. INFO</a></li>
           <li><a href="#skills" data-text="02. CORE">02. CORE</a></li>
           <li><a href="#projects" data-text="03. WORK">03. WORK</a></li>
-          <li><a href="#contact" data-text="04. COMM">04. COMM</a></li>
+          <li><a href="#gallery" data-text="04. GALERÍA">04. GALERÍA</a></li>
+          <li><a href="#contact" data-text="05. COMM">05. COMM</a></li>
+          <li><button class="theme-toggle" id="theme-toggle" title="Cambiar Tema">☼</button></li>
         </ul>
       </nav>
     </header>
@@ -131,9 +135,43 @@
         </div>
       </section>
 
-      <section id="contact" class="mono-panel gs-reveal">
+      <section id="gallery" class="mono-panel gs-reveal">
         <div class="section-header">
           <span class="section-num">04.</span>
+          <h2>GALERÍA DE MODELOS 3D</h2>
+        </div>
+        <div class="panel-content" style="max-width: 100%;">
+          <p class="lead-text">Exploración detallada de estructuras tridimensionales secundarias.</p>
+          <p style="margin-bottom: 3rem;">Arrastra para rotar, usa la rueda del ratón o pellizca para acercar.</p>
+          
+          <div class="gallery-grid">
+            <!-- Modelo 1 -->
+            <div class="model-card">
+              <!-- Reemplaza src con la ruta a tu modelo 1 -->
+              <model-viewer src="assets/3d/modelo1.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+              <div class="model-title">MODELO_ALFA.glb</div>
+            </div>
+
+            <!-- Modelo 2 -->
+            <div class="model-card">
+              <!-- Reemplaza src con la ruta a tu modelo 2 -->
+              <model-viewer src="assets/3d/modelo2.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+              <div class="model-title">MODELO_BETA.glb</div>
+            </div>
+
+            <!-- Modelo 3 -->
+            <div class="model-card">
+              <!-- Reemplaza src con la ruta a tu modelo 3 -->
+              <model-viewer src="assets/3d/modelo3.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+              <div class="model-title">MODELO_GAMMA.glb</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mono-panel gs-reveal">
+        <div class="section-header">
+          <span class="section-num">05.</span>
           <h2>LÍNEAS DE COMUNICACIÓN</h2>
         </div>
         <div class="panel-content">
