@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itran - 3D Developer Portfolio</title>
+  <meta name="description" content="Futuristic Minimalist Developer Portfolio featuring a custom Blender setup.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Import Map for Three.js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Error Banner (hidden by default) -->
+  <div id="cors-warning" style="display: none; position: fixed; top: 0; width: 100%; background: #fff; color: #000; z-index: 9999; text-align: center; padding: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: bold;">
+    [!] ADVERTENCIA: Estás abriendo el archivo localmente (file://). El modelo 3D no se cargará. Por favor, usa Visual Studio Code con la extensión "Live Server".
+  </div>
+
+  <!-- WebGL Canvas Container -->
+  <div id="canvas-container"></div>
+
+  <!-- UI Overlay -->
+  <main id="app">
+    <header class="header">
+      <div class="header-line"></div>
+      <nav>
+        <div class="logo">ITRAN <span class="logo-accent">// SYS.DEV</span></div>
+        <ul class="nav-links">
+          <li><a href="#about" data-text="01. INFO">01. INFO</a></li>
+          <li><a href="#skills" data-text="02. CORE">02. CORE</a></li>
+          <li><a href="#projects" data-text="03. WORK">03. WORK</a></li>
+          <li><a href="#contact" data-text="04. COMM">04. COMM</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero-section" id="hero">
+      <div class="grid-overlay"></div>
+      <div class="hero-content">
+        <div class="avatar-wrapper gs-reveal">
+          <img src="https://i.pravatar.cc/150?img=11" alt="Itran Avatar" class="avatar-bw">
+          <div class="avatar-scanline"></div>
+        </div>
+        <div class="title-container">
+          <h1 class="gs-reveal delay-1">ITRAN</h1>
+          <h2 class="gs-reveal delay-2">CREADOR 3D_ / DEV</h2>
+        </div>
+        
+        <div class="interaction-hint gs-reveal delay-3">
+          <p>[ ROTAR: DRAG // ZOOM: SCROLL ]</p>
+        </div>
+        
+        <div class="actions gs-reveal delay-4">
+          <button class="btn-primary" id="light-toggle">
+            <span class="btn-text">INICIAR ESCANEO ESTRUCTURAL</span>
+            <span class="btn-icon">»</span>
+          </button>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <section id="about" class="mono-panel gs-reveal">
+        <div class="section-header">
+          <span class="section-num">01.</span>
+          <h2>SOBRE MÍ</h2>
+        </div>
+        <div class="panel-content">
+          <p class="lead-text">Soy un desarrollador enfocado en la convergencia entre la lógica pura y el diseño espacial.</p>
+          <p>Combino código estructurado con diseño 3D monocromático para llevar las interfaces web al siguiente nivel. Construyo experiencias donde la seriedad del negro y la precisión del blanco definen la estética.</p>
+        </div>
+      </section>
+
+      <section id="skills" class="mono-panel gs-reveal">
+        <div class="section-header">
+          <span class="section-num">02.</span>
+          <h2>HABILIDADES CENTRALES</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-tag">HTML5 / CSS3 [STRUCT]</div>
+          <div class="skill-tag">JavaScript [LOGIC]</div>
+          <div class="skill-tag">Three.js / WebGL [RENDER]</div>
+          <div class="skill-tag">Blender 3D [MODELING]</div>
+          <div class="skill-tag">Rive Animations [MOTION]</div>
+          <div class="skill-tag">Git / GitHub [VCS]</div>
+        </div>
+      </section>
+
+      <section id="projects" class="mono-panel gs-reveal">
+        <div class="section-header">
+          <span class="section-num">03.</span>
+          <h2>REGISTRO DE PROYECTOS</h2>
+        </div>
+        <div class="projects-list">
+          <article class="project-row">
+            <div class="project-meta">
+              <span class="project-id">PRJ-01</span>
+              <span class="project-type">INTERACTIVE GRAPHICS</span>
+            </div>
+            <div class="project-details">
+              <h3>ANIMACIÓN RIVE</h3>
+              <p>Implementación de estados dinámicos y micro-interacciones utilizando el motor Rive. Movimiento preciso y calculable.</p>
+              <a href="#" class="btn-secondary">ACCEDER A DATOS [↗]</a>
+            </div>
+          </article>
+          
+          <article class="project-row">
+            <div class="project-meta">
+              <span class="project-id">PRJ-02</span>
+              <span class="project-type">SPATIAL RENDER</span>
+            </div>
+            <div class="project-details">
+              <h3>SETUP 3D [BLENDER]</h3>
+              <p>Modelado estructural de un entorno de desarrollo. Es la arquitectura tridimensional que se ejecuta en el fondo de este documento.</p>
+              <a href="#" class="btn-secondary">ACCEDER A DATOS [↗]</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="mono-panel gs-reveal">
+        <div class="section-header">
+          <span class="section-num">04.</span>
+          <h2>LÍNEAS DE COMUNICACIÓN</h2>
+        </div>
+        <div class="panel-content">
+          <p>Sistemas abiertos para recepción de propuestas y colaboración estructural.</p>
+          <div class="social-links">
+            <a href="#" target="_blank" class="social-btn">GITHUB</a>
+            <a href="#" target="_blank" class="social-btn">LINKEDIN</a>
+            <a href="mailto:ejemplo@correo.com" class="social-btn">TRANSMISIÓN DE DATOS (EMAIL)</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="system-footer">
+        <div class="footer-line"></div>
+        <p>SYSTEM.VERSION_2026 // ITRAN.DEV // RENDERED_IN_REALTIME</p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    // Detect local file protocol to warn about CORS for 3D model
+    if (window.location.protocol === 'file:') {
+        document.getElementById('cors-warning').style.display = 'block';
+    }
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
