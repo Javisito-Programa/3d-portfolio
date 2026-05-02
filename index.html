@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
   <!-- Mapa de Importación para Three.js -->
   <script type="importmap">
     {
@@ -22,10 +25,13 @@
   <!-- Model Viewer Script -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
+
 <body>
   <!-- Banner de Error (Oculto por defecto) -->
-  <div id="cors-warning" style="display: none; position: fixed; top: 0; width: 100%; background: #fff; color: #000; z-index: 9999; text-align: center; padding: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: bold;">
-    [!] ADVERTENCIA: Estás abriendo el archivo localmente (file://). El modelo 3D no se cargará. Por favor, usa Visual Studio Code con la extensión "Live Server".
+  <div id="cors-warning"
+    style="display: none; position: fixed; top: 0; width: 100%; background: #fff; color: #000; z-index: 9999; text-align: center; padding: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: bold;">
+    [!] ADVERTENCIA: Estás abriendo el archivo localmente (file://). El modelo 3D no se cargará. Por favor, usa Visual
+    Studio Code con la extensión "Live Server".
   </div>
 
   <!-- Contenedor del Canvas WebGL (Fondo 3D) -->
@@ -59,11 +65,11 @@
           <h1 class="gs-reveal delay-1">ITRAN</h1>
           <h2 class="gs-reveal delay-2">CREADOR 3D_ / DEV</h2>
         </div>
-        
+
         <div class="interaction-hint gs-reveal delay-3">
           <p>[ ROTAR: DRAG // ZOOM: SCROLL ]</p>
         </div>
-        
+
         <div class="actions gs-reveal delay-4">
           <button class="btn-primary" id="light-toggle">
             <span class="btn-text">INICIAR ESCANEO ESTRUCTURAL</span>
@@ -72,6 +78,7 @@
         </div>
       </div>
       <div class="scroll-indicator">
+        <span class="scroll-text">SCROLL</span>
         <div class="scroll-line"></div>
       </div>
     </div>
@@ -83,8 +90,10 @@
           <h2>SOBRE MÍ</h2>
         </div>
         <div class="panel-content">
-          <p class="lead-text">Soy un desarrollador enfocado en la convergencia entre la lógica pura y el diseño espacial.</p>
-          <p>Combino código estructurado con diseño 3D monocromático para llevar las interfaces web al siguiente nivel. Construyo experiencias donde la seriedad del negro y la precisión del blanco definen la estética.</p>
+          <p class="lead-text">Soy un desarrollador enfocado en la convergencia entre la lógica pura y el diseño
+            espacial.</p>
+          <p>Combino código estructurado con diseño 3D monocromático para llevar las interfaces web al siguiente nivel.
+            Construyo experiencias donde la seriedad del negro y la precisión del blanco definen la estética.</p>
         </div>
       </section>
 
@@ -116,11 +125,12 @@
             </div>
             <div class="project-details">
               <h3>ANIMACIÓN RIVE</h3>
-              <p>Implementación de estados dinámicos y micro-interacciones utilizando el motor Rive. Movimiento preciso y calculable.</p>
+              <p>Implementación de estados dinámicos y micro-interacciones utilizando el motor Rive. Movimiento preciso
+                y calculable.</p>
               <a href="#" class="btn-secondary">ACCEDER A DATOS [↗]</a>
             </div>
           </article>
-          
+
           <article class="project-row">
             <div class="project-meta">
               <span class="project-id">PRJ-02</span>
@@ -128,8 +138,8 @@
             </div>
             <div class="project-details">
               <h3>SETUP 3D [BLENDER]</h3>
-              <p>Modelado estructural de un entorno de desarrollo. Es la arquitectura tridimensional que se ejecuta en el fondo de este documento.</p>
-              <a href="#" class="btn-secondary">ACCEDER A DATOS [↗]</a>
+              <p>Modelado estructural de un entorno de desarrollo. Proyecto integrado en la galería 3D.</p>
+              <a href="#gallery" class="btn-secondary">VER EN GALERÍA [↗]</a>
             </div>
           </article>
         </div>
@@ -143,26 +153,28 @@
         <div class="panel-content" style="max-width: 100%;">
           <p class="lead-text">Exploración detallada de estructuras tridimensionales secundarias.</p>
           <p style="margin-bottom: 3rem;">Arrastra para rotar, usa la rueda del ratón o pellizca para acercar.</p>
-          
+
           <div class="gallery-grid">
-            <!-- Modelo 1 -->
+            <!-- Modelo Setup -->
             <div class="model-card">
-              <!-- Reemplaza src con la ruta a tu modelo 1 -->
-              <model-viewer src="assets/3d/modelo1.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
-              <div class="model-title">MODELO_ALFA.glb</div>
+              <model-viewer src="assets/3d/Setup.glb" camera-controls auto-rotate shadow-intensity="1"
+                exposure="1"></model-viewer>
+              <div class="model-title">SETUP_DEV.glb</div>
             </div>
 
             <!-- Modelo 2 -->
             <div class="model-card">
               <!-- Reemplaza src con la ruta a tu modelo 2 -->
-              <model-viewer src="assets/3d/modelo2.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+              <model-viewer src="assets/3d/Modelo2.glb" camera-controls auto-rotate shadow-intensity="1"
+                exposure="1"></model-viewer>
               <div class="model-title">MODELO_BETA.glb</div>
             </div>
 
             <!-- Modelo 3 -->
             <div class="model-card">
               <!-- Reemplaza src con la ruta a tu modelo 3 -->
-              <model-viewer src="assets/3d/modelo3.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"></model-viewer>
+              <model-viewer src="assets/3d/modelo3.glb" camera-controls auto-rotate shadow-intensity="1"
+                exposure="1"></model-viewer>
               <div class="model-title">MODELO_GAMMA.glb</div>
             </div>
           </div>
@@ -196,9 +208,10 @@
   <script>
     // Detect local file protocol to warn about CORS for 3D model
     if (window.location.protocol === 'file:') {
-        document.getElementById('cors-warning').style.display = 'block';
+      document.getElementById('cors-warning').style.display = 'block';
     }
   </script>
   <script type="module" src="script.js"></script>
 </body>
+
 </html>

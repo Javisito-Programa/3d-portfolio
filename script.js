@@ -8,7 +8,7 @@ const container = document.getElementById('canvas-container');
 const scene = new THREE.Scene();
 
 // No establecemos color de fondo para que sea transparente (o podemos usar una niebla muy oscura)
-scene.fog = new THREE.FogExp2(0x030303, 0.02);
+scene.fog = new THREE.FogExp2(0x05050a, 0.02);
 
 // Cámara (Planos cercanos/lejanos aumentados para evitar recortes en modelos grandes)
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 5000);
@@ -42,16 +42,16 @@ controls.update();
 
 // --- Iluminación ---
 // Luz ambiental base (Baja intensidad para alto contraste)
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
 scene.add(ambientLight);
 
-// Luz estructural blanca nítida 1
-const neonLight1 = new THREE.PointLight(0xffffff, 50, 20);
+// Luz estructural nítida 1 (Cyan Neón)
+const neonLight1 = new THREE.PointLight(0x00f3ff, 50, 20);
 neonLight1.position.set(2, 4, 2);
 scene.add(neonLight1);
 
-// Luz de relleno secundaria
-const neonLight2 = new THREE.PointLight(0xaaaaaa, 20, 20);
+// Luz de relleno secundaria (Púrpura Vibrante)
+const neonLight2 = new THREE.PointLight(0xb500ff, 50, 20);
 neonLight2.position.set(-2, 2, -2);
 scene.add(neonLight2);
 
@@ -95,7 +95,7 @@ const createPlaceholder = () => {
 
 // Intentar cargar el archivo GLB del usuario. Si no existe, usar el cubo provisional.
 loader.load(
-    'assets/3d/setup.glb', // Ruta al modelo real
+    'assets/3d/SolarSystem.glb', // Ruta al modelo real
     (gltf) => {
         model = gltf.scene;
         
@@ -158,10 +158,10 @@ for(let i = 0; i < particlesCount * 3; i++) {
 
 particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
 const particlesMaterial = new THREE.PointsMaterial({
-    size: 0.03,
-    color: 0xffffff,
+    size: 0.035,
+    color: 0x00f3ff,
     transparent: true,
-    opacity: 0.8,
+    opacity: 0.6,
     blending: THREE.AdditiveBlending
 });
 
@@ -198,6 +198,10 @@ function animate() {
     const elapsedTime = clock.getElapsedTime();
 
     controls.update();
+
+    if (model) {
+        model.rotation.y += 0.001; // Rotación autónoma del sistema solar
+    }
 
     // Flotación sutil de partículas
     particlesMesh.rotation.y = -0.05 * elapsedTime;
@@ -297,21 +301,21 @@ themeToggleBtn.addEventListener('click', () => {
         themeToggleBtn.innerHTML = '☾';
         
         // Cambiar colores en Three.js para Modo Claro
-        scene.fog.color.setHex(0xf8f9fa);
+        scene.fog.color.setHex(0xf0f4f8);
         // Ajustamos las luces para que no quemen la imagen en fondo blanco
         gsap.to(ambientLight, { intensity: 0.5, duration: 1 });
         gsap.to(dirLight, { intensity: 1.5, duration: 1 });
-        particlesMaterial.color.setHex(0x000000); // Partículas negras para que se vean
+        particlesMaterial.color.setHex(0x0ea5e9); // Partículas azules para que se vean
     } else {
         // Cambiar variables CSS en el HTML al Modo Oscuro por defecto
         document.documentElement.removeAttribute('data-theme');
         themeToggleBtn.innerHTML = '☼';
         
         // Restaurar colores en Three.js para Modo Oscuro
-        scene.fog.color.setHex(0x030303);
+        scene.fog.color.setHex(0x05050a);
         // Restauramos intensidades
-        gsap.to(ambientLight, { intensity: 0.2, duration: 1 });
+        gsap.to(ambientLight, { intensity: 0.3, duration: 1 });
         gsap.to(dirLight, { intensity: 3, duration: 1 });
-        particlesMaterial.color.setHex(0xffffff); // Partículas blancas
+        particlesMaterial.color.setHex(0x00f3ff); // Partículas cyan
     }
 });
