@@ -130,7 +130,12 @@
               <h3>ANIMACIÓN RIVE</h3>
               <p>Implementación de estados dinámicos y micro-interacciones utilizando el motor Rive. Movimiento preciso
                 y calculable.</p>
-              <a href="https://github.com/Javisito-Programa/login_with_rive_animation" class="btn-secondary">ACCEDER A
+              <div class="video-container" style="margin: 1rem 0;">
+                <video src="assets/Videos/Loginbear.mp4" autoplay loop muted playsinline
+                  style="width: 100%; border: 1px solid var(--neon-cyan); border-radius: 4px; box-shadow: 0 0 10px rgba(0, 243, 255, 0.2);"></video>
+              </div>
+              <a href="https://github.com/Javisito-Programa/login_with_rive_animation" class="btn-secondary"
+                target="_blank">ACCEDER A
                 DATOS [↗]</a>
             </div>
           </article>
@@ -158,20 +163,61 @@
           <p class="lead-text">Exploración detallada de estructuras tridimensionales secundarias.</p>
           <p style="margin-bottom: 3rem;">Arrastra para rotar, usa la rueda del ratón o pellizca para acercar.</p>
 
-          <div class="gallery-grid">
+          <div class="gallery-grid armory-layout">
             <!-- Modelo Setup -->
-            <div class="model-card">
-              <model-viewer src="assets/3d/Setup.glb" camera-controls auto-rotate shadow-intensity="1"
-                exposure="1"></model-viewer>
-              <div class="model-title">SETUP_GAMER.glb</div>
+            <div class="model-card armory-pod">
+              <div class="pod-header">
+                <span class="pod-id">MK-01</span>
+                <span class="pod-status">ONLINE</span>
+              </div>
+              <div class="pod-display">
+                <model-viewer src="assets/3d/Setup.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"
+                  camera-target="auto auto auto" bounds="tight" disable-zoom disable-pan></model-viewer>
+                <div class="pedestal-glow"></div>
+                <div class="pedestal-ring"></div>
+              </div>
+              <div class="pod-footer">
+                <div class="model-title">SETUP_GAMER.glb</div>
+                <button class="btn-secondary btn-view-3d" data-model="assets/3d/Setup.glb">VER MODELO 3D [↗]</button>
+              </div>
             </div>
 
             <!-- Modelo 2 -->
-            <div class="model-card">
-              <!-- Reemplaza src con la ruta a tu modelo 2 -->
-              <model-viewer src="assets/3d/Modelo2.glb" camera-controls auto-rotate shadow-intensity="1"
-                exposure="1"></model-viewer>
-              <div class="model-title">RESTAURANT.glb</div>
+            <div class="model-card armory-pod">
+              <div class="pod-header">
+                <span class="pod-id">MK-02</span>
+                <span class="pod-status">ONLINE</span>
+              </div>
+              <div class="pod-display">
+                <!-- Reemplaza src con la ruta a tu modelo 2 -->
+                <model-viewer src="assets/3d/Modelo2.glb" camera-controls auto-rotate shadow-intensity="1" exposure="1"
+                  camera-target="auto auto auto" bounds="tight" disable-zoom disable-pan></model-viewer>
+                <div class="pedestal-glow"></div>
+                <div class="pedestal-ring"></div>
+              </div>
+              <div class="pod-footer">
+                <div class="model-title">RESTAURANT.glb</div>
+                <button class="btn-secondary btn-view-3d" data-model="assets/3d/Modelo2.glb">VER MODELO 3D [↗]</button>
+              </div>
+            </div>
+
+            <!-- Sistema Solar -->
+            <div class="model-card armory-pod solar-pod">
+              <div class="pod-header">
+                <span class="pod-id">MK-03</span>
+                <span class="pod-status">ONLINE</span>
+              </div>
+              <div class="pod-display">
+                <model-viewer src="assets/3d/SolarSystem.glb" camera-controls auto-rotate shadow-intensity="1"
+                  exposure="1" camera-target="auto auto auto" bounds="tight" disable-zoom disable-pan></model-viewer>
+                <div class="pedestal-glow"></div>
+                <div class="pedestal-ring"></div>
+              </div>
+              <div class="pod-footer">
+                <div class="model-title">SISTEMA_SOLAR.glb</div>
+                <button class="btn-secondary btn-view-3d" data-model="assets/3d/SolarSystem.glb">VER MODELO 3D
+                  [↗]</button>
+              </div>
             </div>
           </div>
 
@@ -214,6 +260,19 @@
         <div class="footer-line"></div>
         <p>SYSTEM.VERSION_2026 // ITRAN.DEV // RENDERED_IN_REALTIME</p>
       </footer>
+    </div>
+
+    <!-- Modal Visor 3D Pantalla Completa -->
+    <div id="model-modal" class="modal-overlay">
+      <div class="modal-ui-top">
+        <div class="modal-title-hud">SYSTEM.VIEWER // INTERACTIVE MODE</div>
+        <button id="modal-close" class="btn-modal-action">SALIR [X]</button>
+      </div>
+      <div class="modal-ui-bottom">
+      </div>
+      <model-viewer id="fullscreen-viewer" src="" camera-controls auto-rotate shadow-intensity="1"
+        exposure="1"></model-viewer>
+      <div class="modal-hud-overlay"></div>
     </div>
   </main>
 

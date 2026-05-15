@@ -319,3 +319,36 @@ themeToggleBtn.addEventListener('click', () => {
         particlesMaterial.color.setHex(0x00f3ff); // Partículas cyan
     }
 });
+
+// --- Modal Viewer Logic (Iron Man Armory) ---
+const modalOverlay = document.getElementById('model-modal');
+const btnCloseModal = document.getElementById('modal-close');
+const fullscreenViewer = document.getElementById('fullscreen-viewer');
+const btnView3Ds = document.querySelectorAll('.btn-view-3d');
+
+// Open Modal
+btnView3Ds.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const modelSrc = e.target.getAttribute('data-model');
+        fullscreenViewer.src = modelSrc;
+        
+        fullscreenViewer.cameraTarget = "auto auto auto";
+        fullscreenViewer.setAttribute('bounds', 'tight');
+        
+        if (modelSrc.includes('SolarSystem.glb')) {
+            modalOverlay.classList.add('space-modal');
+        } else {
+            modalOverlay.classList.remove('space-modal');
+        }
+        
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling in background
+    });
+});
+
+// Close Modal
+btnCloseModal.addEventListener('click', () => {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+    fullscreenViewer.src = ''; // Clear to save memory
+});
