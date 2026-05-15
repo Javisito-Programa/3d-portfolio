@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00f3ff&height=150&section=header&text=🌌%20PROJECT.NEXUS&fontSize=50&fontColor=ffffff&animation=fadeIn" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00f3ff&height=150&section=header&text=🌌%203D%20WEBGL%20WORKSPACE&fontSize=50&fontColor=ffffff&animation=fadeIn" width="100%"/>
   
   # 🚀 INTERACTIVE 3D DEVELOPER PORTFOLIO
   **A Next-Generation Web Experience rendered in Real-Time WebGL**
