@@ -11,7 +11,7 @@
 
 > *"Designed not just to be seen, but to be experienced."*
 
-Welcome to **PROJECT.NEXUS**, a cutting-edge web portfolio designed to fuse advanced Front-End development with immersive 3D environments. This project demonstrates the seamless integration of interactive graphics, complex animations, and a sci-fi inspired UI design (Iron Man Armory style).
+Welcome to the **3D WEBGL WORKSPACE**, a cutting-edge web portfolio designed to fuse advanced Front-End development with immersive 3D environments. This project demonstrates the seamless integration of interactive graphics, complex animations, and a sci-fi inspired UI design (Iron Man Armory style).
 
 ---
 
@@ -24,8 +24,8 @@ A gallery of 3D models housed in cybernetic containment pods. Features glowing p
 ### 🌌 **Deep Space Simulation (Pure CSS)**
 The Solar System model features an exclusive environment: a deep space background generated 100% with CSS math (`radial-gradient`), creating an infinitely moving starfield without using a single image.
 
-### 🐻 **Rive Motion Integration**
-Integration of dynamic states and micro-interactions using the **Rive** engine (Loginbear), achieving fluid, lightweight vector animations with real-time response.
+### 🐻 **Flutter + Rive Showcase**
+Features a dedicated project log showcasing the "Animated Bear Login", an interactive Flutter application integrating **Rive State Machines** for dynamic eye-tracking and character reactions.
 
 ### 🔮 **Cyber-UI & Glassmorphism**
 Interface built with translucent panels (`backdrop-filter`), customizable neon accents (Cyan and Solar Orange), futuristic typography (*Space Grotesk*), and scroll-reveal animations powered by **GSAP**.
@@ -67,7 +67,7 @@ The project is designed to run natively on modern browsers, but due to **CORS** 
 ## 📁 SYSTEM STRUCTURE
 
 ```text
-📦 PROJECT.NEXUS
+📦 3D_WEBGL_WORKSPACE
  ┣ 📂 assets
  ┃ ┣ 📂 3d
  ┃ ┃ ┣ 📜 setup.glb           # Main development environment
@@ -85,8 +85,10 @@ The project is designed to run natively on modern browsers, but due to **CORS** 
 ---
 
 ## 🎓 ACADEMIC INFORMATION
-This project is a technical demonstration of advanced Front-End capabilities, modern interface structuring, and 3D graphics integration on the web.
+This project is a technical demonstration of advanced Front-End capabilities, modern interface structuring, and 3D graphics integration on the web, developed as a final academic challenge.
 
+- **Course Name:** Graphication
+- **Teacher's Name:** Rodrigo Fidel Gaxiola Sosa
 - **Developer:** ITRAN JAVIER MORALES BROCA
 - **GitHub Profile:** [@Javisito-Programa](https://github.com/Javisito-Programa)
 
