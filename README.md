@@ -1,125 +1,96 @@
-# 🌌 Immersive 3D Developer Portfolio
-
-Welcome to the **Immersive 3D Developer Portfolio** project!  
-This is a modern, interactive web portfolio designed to showcase front-end skills and 3D environment rendering.
-
-The project demonstrates how to integrate **Three.js** and **WebGL** to load a custom Blender scene directly into the browser, creating a dynamic, explorable background.
-
----
-
-## 🎓 Academic Information
-
-- **Course Name:** [Insert Course Name]  
-- **Teacher's Name:** [Insert Teacher's Name]  
-- **Student Name:** [Insert Your Name]
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00f3ff&height=150&section=header&text=🌌%20PROJECT.NEXUS&fontSize=50&fontColor=ffffff&animation=fadeIn" width="100%"/>
+  
+  # 🚀 INTERACTIVE 3D DEVELOPER PORTFOLIO
+  **A Next-Generation Web Experience rendered in Real-Time WebGL**
+  
+  [Explorar](#-features) • [Instalación](#-instalación) • [Tecnologías](#-tecnologías) • [Estructura](#-estructura-del-sistema)
+</div>
 
 ---
 
-## ✨ Features
+> *"Diseñado no solo para ser visto, sino para ser experimentado."*
 
-- 🖥️ **Interactive 3D Background:** The entire website background is a real-time rendered 3D room.
-- 🌞 **Dynamic Lighting & Themes:** A functional Light/Dark mode toggle that instantly recalculates 3D scene lighting and UI CSS variables.
-- 🔍 **Structural Scan Mode:** A custom "Scan" button that strips the materials from the 3D model and renders its pure wireframe structure.
-- 🖼️ **3D Gallery:** A dedicated section using `<model-viewer>` to showcase 3 individual, highly detailed 3D models.
-- 📱 **Fully Responsive:** Smooth UI scaling and layout adjustments for mobile devices.
+Bienvenido a **PROJECT.NEXUS**, un portafolio web de vanguardia diseñado para fusionar el desarrollo Front-End avanzado con entornos 3D inmersivos. Este proyecto demuestra la integración fluida de gráficos interactivos, animaciones complejas y un diseño UI inspirado en interfaces de ciencia ficción (estilo *Iron Man Armory*).
 
 ---
 
-## 📚 Theory
+## ⚡ FEATURES DESTACADOS
 
-### 🧊 What is Three.js?
+### 🖥️ **Armería 3D Interactiva (Iron Man Style)**
+Una galería de modelos 3D alojados en cápsulas de contención cibernéticas. Cuenta con pedestales brillantes, aros giratorios y un **Visor Holográfico a Pantalla Completa**. 
+* Modelos incluidos: **Setup Gamer**, **Restaurante**, y una **Simulación del Sistema Solar**.
 
-**Three.js** is a powerful 3D JavaScript library that makes it easy to create and display animated 3D computer graphics in a web browser using WebGL.  
-Instead of dealing directly with complex WebGL API calls, Three.js provides high-level objects like Cameras, Scenes, Lights, and Materials.
+### 🌌 **Simulación de Espacio Profundo (Pure CSS)**
+El modelo del Sistema Solar cuenta con un entorno exclusivo: un fondo de espacio profundo generado 100% con matemáticas CSS (`radial-gradient`), creando un campo de estrellas en movimiento infinito sin usar una sola imagen.
 
-In this project, Three.js is used to:
-- Render the `setup.glb` model.
-- Apply realistic PBR lighting (`RoomEnvironment`).
-- Create floating particle effects mapped to mouse movements (Parallax).
+### 🐻 **Rive Motion Integration**
+Integración de estados dinámicos y micro-interacciones utilizando el motor **Rive** (Loginbear), logrando animaciones vectoriales fluidas, ligeras y con respuesta en tiempo real.
 
----
-
-### 🌐 What is WebGL?
-
-**WebGL (Web Graphics Library)** is a JavaScript API for rendering high-performance interactive 3D and 2D graphics within any compatible web browser without the use of plug-ins. It interacts directly with the GPU.
+### 🔮 **Cyber-UI & Glassmorphism**
+Interfaz construida con paneles translúcidos (`backdrop-filter`), detalles de neón personalizables (Cyan y Naranja Solar), tipografía futurista (*Space Grotesk*) y animaciones de revelado con **GSAP**.
 
 ---
 
-## 🛠 Technologies
+## 🛠️ STACK TECNOLÓGICO
 
-- 🌐 HTML5 (Semantic Structure)
-- 🎨 CSS3 (CSS Variables, Grid/Flexbox, Glassmorphism)
-- ⚡ JavaScript (ES6+ Vanilla JS)
-- 🧊 Three.js (3D Rendering)
-- 🟩 GSAP (Scroll animations and transitions)
+<div align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" />
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
+</div>
 
----
-
-## 🧰 Requirements
-
-- Any modern web browser (Chrome, Firefox, Safari, Edge).
-- A local development server (like VS Code **Live Server** extension) to bypass CORS restrictions when loading the `.glb` files.
-
----
-
-## 🚀 Installation & Setup
-
-### 1- Clone the repository:
-
-```bash
-git clone <your_project_url>
-```
-
-### 2- Open the project:
-
-Open the `3d-portfolio` folder in **Visual Studio Code**.
-
-### 3- Add your 3D Models:
-
-- Export your main background scene from Blender as `setup.glb` and place it in `assets/3d/`.
-- Export your gallery models as `modelo1.glb`, `modelo2.glb`, and `modelo3.glb` and place them in the same folder.  
-*(Make sure to check "Apply Modifiers" when exporting from Blender).*
-
-### 4- Run the project:
-
-Click on **"Go Live"** at the bottom right of VS Code to launch the Live Server.
+- **Three.js & WebGL**: Renderizado de modelos `.glb` interactivos con control de cámara dinámico y corrección geométrica de origen espacial.
+- **Google `<model-viewer>`**: Motor principal para la manipulación y visualización fluida de los assets 3D en la galería.
 
 ---
 
-## 🎮 Usage
+## 🚀 INSTALACIÓN Y DESPLIEGUE
 
-- **Navigate:** Scroll down to see the different sections revealed with GSAP animations.
-- **Interact:** Drag with your mouse on the background to rotate the main 3D scene. Use the scroll wheel to zoom in and out.
-- **Scan Structure:** Click the "INICIAR ESCANEO ESTRUCTURAL" button to trigger the wireframe view of the scene.
-- **Change Theme:** Click the `☼` or `☾` button in the navigation bar to toggle between Light and Dark mode.
+El proyecto está diseñado para funcionar de manera nativa en navegadores modernos, pero debido a las políticas de seguridad **CORS** para la carga de modelos 3D, debe ejecutarse a través de un servidor local.
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/Javisito-Programa/3d-portfolio.git
+   ```
+
+2. **Ejecutar Localmente:**
+   - Abre la carpeta del proyecto en **Visual Studio Code**.
+   - Instala la extensión **Live Server**.
+   - Haz clic en `Go Live` en la barra inferior para desplegar el entorno.
 
 ---
 
-## 📁 Project Structure
+## 📁 ESTRUCTURA DEL SISTEMA
 
 ```text
-/
-├── index.html       # Main HTML layout & UI overlay
-├── style.css        # Glassmorphism design and Light/Dark themes
-├── script.js        # Three.js configuration, GLTF loading, GSAP animations
-├── README.md        # Project documentation
-└── assets/
-    └── 3d/
-        ├── setup.glb   # Main background scene
-        ├── modelo1.glb # Gallery item 1
-        ├── modelo2.glb # Gallery item 2
-        └── modelo3.glb # Gallery item 3
+📦 PROJECT.NEXUS
+ ┣ 📂 assets
+ ┃ ┣ 📂 3d
+ ┃ ┃ ┣ 📜 setup.glb           # Entorno de desarrollo principal
+ ┃ ┃ ┣ 📜 Modelo2.glb         # Renderización Arquitectónica (Restaurante)
+ ┃ ┃ ┗ 📜 SolarSystem.glb     # Simulación Astronómica
+ ┃ ┣ 📂 Videos
+ ┃ ┃ ┗ 📜 Loginbear.mp4       # Render interactivo de Rive
+ ┃ ┗ 📂 img
+ ┣ 📜 index.html              # Estructura del DOM & Interfaz
+ ┣ 📜 style.css               # Sistema de diseño, CSS Stars y Neon FX
+ ┣ 📜 script.js               # Controladores de cámara 3D y lógica del Modal
+ ┗ 📜 README.md               # Documentación
 ```
 
 ---
 
-## 🎥 DEMO
+## 🎓 INFORMACIÓN ACADÉMICA
+Este proyecto es una demostración técnica de capacidades Front-End avanzadas, estructuración de interfaces modernas e integración de gráficos 3D en la web.
 
-![Demo](./assets/portfolio_demo.gif)
+- **Desarrollador:** Javier (Itran)
+- **Perfil de GitHub:** [@Javisito-Programa](https://github.com/Javisito-Programa)
 
 ---
-
-## 👏 Credits
-
-- **3D Modeling & Development:** [Your Name]
-- **Libraries used:** Three.js, GSAP, Google Model-Viewer.
+<div align="center">
+  <i>Renderizado en tiempo real. Construido para el futuro.</i>
+</div>
