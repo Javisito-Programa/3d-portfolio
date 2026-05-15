@@ -4,35 +4,35 @@
   # 🚀 INTERACTIVE 3D DEVELOPER PORTFOLIO
   **A Next-Generation Web Experience rendered in Real-Time WebGL**
   
-  [Explorar](#-features) • [Instalación](#-instalación) • [Tecnologías](#-tecnologías) • [Estructura](#-estructura-del-sistema)
+  [Explore](#-highlighted-features) • [Installation](#-installation-and-deployment) • [Technologies](#️-technology-stack) • [Structure](#-system-structure)
 </div>
 
 ---
 
-> *"Diseñado no solo para ser visto, sino para ser experimentado."*
+> *"Designed not just to be seen, but to be experienced."*
 
-Bienvenido a **PROJECT.NEXUS**, un portafolio web de vanguardia diseñado para fusionar el desarrollo Front-End avanzado con entornos 3D inmersivos. Este proyecto demuestra la integración fluida de gráficos interactivos, animaciones complejas y un diseño UI inspirado en interfaces de ciencia ficción (estilo *Iron Man Armory*).
+Welcome to **PROJECT.NEXUS**, a cutting-edge web portfolio designed to fuse advanced Front-End development with immersive 3D environments. This project demonstrates the seamless integration of interactive graphics, complex animations, and a sci-fi inspired UI design (Iron Man Armory style).
 
 ---
 
-## ⚡ FEATURES DESTACADOS
+## ⚡ HIGHLIGHTED FEATURES
 
-### 🖥️ **Armería 3D Interactiva (Iron Man Style)**
-Una galería de modelos 3D alojados en cápsulas de contención cibernéticas. Cuenta con pedestales brillantes, aros giratorios y un **Visor Holográfico a Pantalla Completa**. 
-* Modelos incluidos: **Setup Gamer**, **Restaurante**, y una **Simulación del Sistema Solar**.
+### 🖥️ **Interactive 3D Armory (Iron Man Style)**
+A gallery of 3D models housed in cybernetic containment pods. Features glowing pedestals, rotating rings, and a **Full-Screen Holographic Viewer**. 
+* Included models: **Gamer Setup**, **Restaurant**, and a **Solar System Simulation**.
 
-### 🌌 **Simulación de Espacio Profundo (Pure CSS)**
-El modelo del Sistema Solar cuenta con un entorno exclusivo: un fondo de espacio profundo generado 100% con matemáticas CSS (`radial-gradient`), creando un campo de estrellas en movimiento infinito sin usar una sola imagen.
+### 🌌 **Deep Space Simulation (Pure CSS)**
+The Solar System model features an exclusive environment: a deep space background generated 100% with CSS math (`radial-gradient`), creating an infinitely moving starfield without using a single image.
 
 ### 🐻 **Rive Motion Integration**
-Integración de estados dinámicos y micro-interacciones utilizando el motor **Rive** (Loginbear), logrando animaciones vectoriales fluidas, ligeras y con respuesta en tiempo real.
+Integration of dynamic states and micro-interactions using the **Rive** engine (Loginbear), achieving fluid, lightweight vector animations with real-time response.
 
 ### 🔮 **Cyber-UI & Glassmorphism**
-Interfaz construida con paneles translúcidos (`backdrop-filter`), detalles de neón personalizables (Cyan y Naranja Solar), tipografía futurista (*Space Grotesk*) y animaciones de revelado con **GSAP**.
+Interface built with translucent panels (`backdrop-filter`), customizable neon accents (Cyan and Solar Orange), futuristic typography (*Space Grotesk*), and scroll-reveal animations powered by **GSAP**.
 
 ---
 
-## 🛠️ STACK TECNOLÓGICO
+## 🛠️ TECHNOLOGY STACK
 
 <div align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
@@ -43,54 +43,54 @@ Interfaz construida con paneles translúcidos (`backdrop-filter`), detalles de n
   <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
 </div>
 
-- **Three.js & WebGL**: Renderizado de modelos `.glb` interactivos con control de cámara dinámico y corrección geométrica de origen espacial.
-- **Google `<model-viewer>`**: Motor principal para la manipulación y visualización fluida de los assets 3D en la galería.
+- **Three.js & WebGL**: Rendering of interactive `.glb` models with dynamic camera controls and geometric spatial origin correction.
+- **Google `<model-viewer>`**: Main engine for fluid manipulation and visualization of 3D assets in the gallery.
 
 ---
 
-## 🚀 INSTALACIÓN Y DESPLIEGUE
+## 🚀 INSTALLATION AND DEPLOYMENT
 
-El proyecto está diseñado para funcionar de manera nativa en navegadores modernos, pero debido a las políticas de seguridad **CORS** para la carga de modelos 3D, debe ejecutarse a través de un servidor local.
+The project is designed to run natively on modern browsers, but due to **CORS** security policies for loading 3D models, it must be run through a local server.
 
-1. **Clonar el repositorio:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Javisito-Programa/3d-portfolio.git
    ```
 
-2. **Ejecutar Localmente:**
-   - Abre la carpeta del proyecto en **Visual Studio Code**.
-   - Instala la extensión **Live Server**.
-   - Haz clic en `Go Live` en la barra inferior para desplegar el entorno.
+2. **Run Locally:**
+   - Open the project folder in **Visual Studio Code**.
+   - Install the **Live Server** extension.
+   - Click `Go Live` on the bottom status bar to deploy the environment.
 
 ---
 
-## 📁 ESTRUCTURA DEL SISTEMA
+## 📁 SYSTEM STRUCTURE
 
 ```text
 📦 PROJECT.NEXUS
  ┣ 📂 assets
  ┃ ┣ 📂 3d
- ┃ ┃ ┣ 📜 setup.glb           # Entorno de desarrollo principal
- ┃ ┃ ┣ 📜 Modelo2.glb         # Renderización Arquitectónica (Restaurante)
- ┃ ┃ ┗ 📜 SolarSystem.glb     # Simulación Astronómica
+ ┃ ┃ ┣ 📜 setup.glb           # Main development environment
+ ┃ ┃ ┣ 📜 Modelo2.glb         # Architectural Rendering (Restaurant)
+ ┃ ┃ ┗ 📜 SolarSystem.glb     # Astronomical Simulation
  ┃ ┣ 📂 Videos
- ┃ ┃ ┗ 📜 Loginbear.mp4       # Render interactivo de Rive
+ ┃ ┃ ┗ 📜 Loginbear.mp4       # Interactive Rive Render
  ┃ ┗ 📂 img
- ┣ 📜 index.html              # Estructura del DOM & Interfaz
- ┣ 📜 style.css               # Sistema de diseño, CSS Stars y Neon FX
- ┣ 📜 script.js               # Controladores de cámara 3D y lógica del Modal
- ┗ 📜 README.md               # Documentación
+ ┣ 📜 index.html              # DOM Structure & UI
+ ┣ 📜 style.css               # Design System, CSS Stars and Neon FX
+ ┣ 📜 script.js               # 3D Camera Controllers and Modal Logic
+ ┗ 📜 README.md               # Documentation
 ```
 
 ---
 
-## 🎓 INFORMACIÓN ACADÉMICA
-Este proyecto es una demostración técnica de capacidades Front-End avanzadas, estructuración de interfaces modernas e integración de gráficos 3D en la web.
+## 🎓 ACADEMIC INFORMATION
+This project is a technical demonstration of advanced Front-End capabilities, modern interface structuring, and 3D graphics integration on the web.
 
-- **Desarrollador:** Javier (Itran)
-- **Perfil de GitHub:** [@Javisito-Programa](https://github.com/Javisito-Programa)
+- **Developer:** ITRAN JAVIER MORALES BROCA
+- **GitHub Profile:** [@Javisito-Programa](https://github.com/Javisito-Programa)
 
 ---
 <div align="center">
-  <i>Renderizado en tiempo real. Construido para el futuro.</i>
+  <i>Rendered in real-time. Built for the future.</i>
 </div>
